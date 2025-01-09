@@ -129,11 +129,11 @@ public class Main {
     }
 
     public static void printSubjectList(List<Subject> subjectList) {
-        for (Subject subject : subjectList) {
-            System.out.println("Subject name: " + subject.getName());
-            System.out.println("Teacher name: " + subject.getTeacher().getName());
-            System.out.println("Students: ");
-            for (Student student : subject.getStudentList()) {
+        for (Subject subj : subjectList) {
+            System.out.println("*Subject(S)*: " + subj.getName().toUpperCase());
+            System.out.println("-Teachers name-: " + subj.getTeacher().getName() + " / " + subj.getTeacher().getLastName().toUpperCase());
+            System.out.println("--Students name--: ");
+            for (Student student : subj.getStudentList()) {
                 System.out.println(" - " + student.getName().toUpperCase());
             }
         }
